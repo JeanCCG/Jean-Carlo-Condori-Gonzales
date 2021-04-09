@@ -44,7 +44,7 @@ string Usuario::decode(string& msj){
     int increment;
     int count;
     int k=0;
-    char codee[msj.length()];//array that stores the characters
+    char codee[msj.length()];//array-- that stores the characters-
     for (int i = 0; i < key; ++i) {
         count=0;
         for (int j = i; j < msj.length(); j+=increment) {

@@ -2,12 +2,14 @@
 #include "User.h"
 using namespace std;
 int main() {
-    Usuario A(4),B(4);
-    string msj="this is a secret message";
+    int key=5;
+    Usuario A(key),B(key);
+    string msj="puto el que lo lea :v";
     cout<<"\nEncode: \n";
     msj=A.encode(msj);
     cout<<msj;
     cout<<"\nDecode: \n";
+    msj="GSa aoblngretaii";
     msj=B.decode(msj);
     cout<<msj;
 
