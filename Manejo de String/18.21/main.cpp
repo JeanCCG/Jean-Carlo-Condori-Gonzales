@@ -5,7 +5,7 @@ using std::strtok;
 using namespace std;
 
 int main() {
-    string texto="Este ¿!?¡es.. un -enunciado- con 7 tokens";
+    string texto="Este_ es.. un ¿!enunciado- con ?¡7 -tokens.,;";
     string signos=".,;:¿?!¡()[]_-*";
     string a;
     for (int i = 0; i < signos.size(); ++i) {
@@ -20,17 +20,17 @@ int main() {
     cout<<"Sin puntuacion: "<<endl;
     cout<<texto<<endl;
 
-    char text[texto.size()];
-    for (int i = 0; i < texto.size(); ++i) {
+    char text[texto.size()+1];
+    for (int i = 0; i < texto.size()+1; ++i) {
         text[i]=texto[i];
     }
     cout<<"En tokens:"<<endl;
 
     char*tokenptr;
-    tokenptr=strtok(text, " ");
+    tokenptr=strtok(text," ");
     while(tokenptr != NULL){
         cout<<tokenptr<<"\n";
-        tokenptr = strtok(NULL, " ");
+        tokenptr = strtok(NULL," ");
     }
     return 0;
 }

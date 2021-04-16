@@ -26,24 +26,23 @@ int main()
     const int tamanioArreglo = 10;
     int orden;
     int contador;
-    string a[ tamanioArreglo ] = { "comunidad", "jugador", "rodilla", "otaku", "cabeza", "estofado", "anticuado",
+    string arr[ tamanioArreglo ] = { "comunidad", "jugador", "rodilla", "otaku", "cabeza", "estofado", "anticuado",
                                    "tridente" , "humanidad", "cerebro"};
-    cout << "Escriba 1 para orden ascendente,\n"
-    << "Escriba 2 para orden descendente: ";
+    cout << "Escriba 1 para orden ascendente,\nEscriba 2 para orden descendente: ";
     cin >> orden;
-    cout << "\nElementos de datos en el orden original\n";
+    cout << "\nElementos de datos en el orden original: \n";
     for ( contador = 0; contador < tamanioArreglo; contador++ )
-        cout << a[ contador ]<<" ";
+        cout << arr[ contador ]<<" ";
     cout<<endl;
     if ( orden == 1 ){
-        ordenamientoSeleccion( a, tamanioArreglo, ascendente );
-        cout << "\nElementos de datos en orden ascendente\n";
+        ordenamientoSeleccion( arr, tamanioArreglo, ascendente );
+        cout << "\nElementos de datos en orden ascendente: \n";
     }else{
-        ordenamientoSeleccion( a, tamanioArreglo, descendente );
-        cout << "\nElementos de datos en orden descendente\n";
+        ordenamientoSeleccion( arr, tamanioArreglo, descendente );
+        cout << "\nElementos de datos en orden descendente: \n";
     }
     for ( contador = 0; contador < tamanioArreglo; contador++ )
-        cout << a[ contador ]<<" ";
+        cout << arr[ contador ]<<" ";
     cout<<endl;
     return 0;
 }
