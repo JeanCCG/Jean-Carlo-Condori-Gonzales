@@ -15,19 +15,19 @@ void ordenamientoSeleccion( string trabajo[], const int tamanio, bool (*compara)
 }
 bool ascendente( string a, string b )
 {
-    return a[0] < b[0];
+    return a < b;
 }
 bool descendente( string a, string b )
 {
-    return a[0] > b[0];
+    return a > b;
 }
 int main()
 {
     const int tamanioArreglo = 10;
     int orden;
     int contador;
-    string a[ tamanioArreglo ] = { "gente", "humanidad", "humano", "persona", "hombre", "mujer", "bebe", "adolescente", "adulto",
-                                   "anciano"};
+    string a[ tamanioArreglo ] = { "comunidad", "jugador", "rodilla", "otaku", "cabeza", "estofado", "anticuado",
+                                   "tridente" , "humanidad", "cerebro"};
     cout << "Escriba 1 para orden ascendente,\n"
     << "Escriba 2 para orden descendente: ";
     cin >> orden;
@@ -46,4 +46,4 @@ int main()
         cout << a[ contador ]<<" ";
     cout<<endl;
     return 0;
-    }
+}

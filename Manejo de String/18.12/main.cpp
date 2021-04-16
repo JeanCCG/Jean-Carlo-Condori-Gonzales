@@ -1,26 +1,11 @@
 #include <iostream>
 #include <string>
 using namespace std;
-void printdoll(int a){
-    if (a==0){
-        cout<<" \n\n\n\n"<<endl;
-    }else if(a==1){
-        cout<<" O\n\n\n\n"<<endl;
-    }else if(a==2){
-        cout<<" O\n |\n\n\n"<<endl;
-    }else if(a==3){
-        cout<<" O\n/|\n\n\n"<<endl;
-    }else if(a==4){
-        cout<<" O\n/|\\ \n\n\n"<<endl;
-    }else if(a==5){
-        cout<<" O\n/|\\ \n |\n \n"<<endl;
-    }else if(a==6){
-        cout<<" O\n/|\\ \n |\n/ \n"<<endl;
-    }else if(a==7){
-        cout<<" O\n/|\\ \n |\n/ \\ "<<endl;
-    }
-}
+
 void ahorcado(int n=0){
+    string doll[8]={" \n\n\n\n"," O\n\n\n\n"," O\n |\n\n\n",
+                    " O\n/|\n\n\n"," O\n/|\\ \n\n\n"," O\n/|\\ \n |\n \n",
+                    " O\n/|\\ \n |\n/ \n"," O\n/|\\ \n |\n/ \\ "};
     string texto[23]={"buscador","cerebro", "semestre", "periodo", "codigo", "hombre", "cmoida", "ahorcado", "torneo", "adulto",
               "anciano", "estacion", "comunidad", "jugador", "rodilla", "otaku", "cabeza", "estofado", "anticuado",
               "tridente" , "humanidad", "humano", "persona"};
@@ -29,7 +14,7 @@ void ahorcado(int n=0){
     int game=0;
     adivinar.resize(palabra.size(),'X');
     while(true){
-        printdoll(game);
+        cout<<doll[game]<<endl;
         if(game==7) {
             cout<<"Perdiste :)"<<endl;
             break;
@@ -48,9 +33,8 @@ void ahorcado(int n=0){
             }
         }
         if(adivinar.find('X')==string::npos){
-            cout<<adivinar<<"\nFelicidades!!! Adivino mi palabra. Desea jugar otra vez? si/no"<<endl;
             string opcion;
-            cin>>opcion;
+            cout<<adivinar<<"\nFelicidades!!! Adivino mi palabra. Desea jugar otra vez? si/no"<<endl;cin>>opcion;
             if (opcion=="si"){
                 ahorcado(n+1);
             }
