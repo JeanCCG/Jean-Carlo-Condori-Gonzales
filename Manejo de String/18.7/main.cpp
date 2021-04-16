@@ -2,44 +2,44 @@
 
 using namespace std;
 
-class Cesar{
+class rot13{
 private:
-    string alfabeto = "abcdefghijklmnopqrstuvwxyz";
-    int clave = 2 ;
+    string alphabet = "abcdefghijklmnopqrstuvwxyz";
+    int key = 2 ;
     int modulo(int a){
         int r = a-26*(a/26);
         r = r+(r<0)*26;
         return r;
     }
 public:
-    string Cifrado(string mensaje){
-        string palabra;
-        for (int i = 0; i < mensaje.length(); ++i) {
-            if (mensaje[i] == ' ' ){
-                palabra+=" ";
+    string encode(string msj){
+        string code;
+        for (int i = 0; i < msj.length(); ++i) {
+            if (msj[i] == ' ' ){
+                code+=" ";
             }else{
-                palabra+=(alfabeto[modulo(alfabeto.find(mensaje[i])+clave)]);
+                code+=(alphabet[modulo(alphabet.find(msj[i])+key)]);
             }
         }
-        return palabra;
+        return code;
     }
-    string Descifrado(string mensaje){
-        string palabra;
-        for (int i = 0; i < mensaje.length(); ++i) {
-            if (mensaje[i] == ' '){
-                palabra+=" ";
+    string decode(string msj){
+        string code;
+        for (int i = 0; i < msj.length(); ++i) {
+            if (msj[i] == ' '){
+                code+=" ";
             }else{
-                palabra+=(alfabeto[modulo(alfabeto.find(mensaje[i])-clave)]);
+                code+=(alphabet[modulo(alphabet.find(msj[i])-key)]);
             }
         }
-        return palabra;
+        return code;
     }
 };
 int main() {
-    string mensaje = "zzzz";
-    mensaje = Cesar().Cifrado(mensaje);
-    cout<<"a) Cifrado: "<<mensaje<<endl;
-    mensaje = Cesar().Descifrado(mensaje);
-    cout<<"b) Descifrado: "<<mensaje<<endl;
+    string msj = "zzzz";
+    msj = rot13().encode(msj);
+    cout<<"a) Cifrado: "<<msj<<endl;
+    msj = rot13().decode(msj);
+    cout<<"b) Descifrado: "<<msj<<endl;
     cout<<"c) No seria muy dificil quebrantar el codigo con el correcto uso de un computo considerable podria probrar las 26 claves posibles y lograr descifrarlo"<<endl;
 }
