@@ -1,6 +1,9 @@
 #include"cesar.h"
 #include <string>
 using namespace std;
+Cesar::Cesar(int clave) {
+    key=clave;
+}
 int Cesar::modulo(int a){
     int r = a-26*(a/26);
     r = r+(r<0)*26;

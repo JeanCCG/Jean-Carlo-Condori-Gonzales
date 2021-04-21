@@ -6,8 +6,9 @@ class Cesar{
 private:
     string alphabet = "abcdefghijklmnopqrstuvwxyz";
     int key = 3;
-    static int modulo(int );
+    int modulo(int);
 public:
+    Cesar(int);
     string encode(string &);
     string decode(string &);
 };

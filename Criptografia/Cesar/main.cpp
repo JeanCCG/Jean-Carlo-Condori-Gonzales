@@ -3,9 +3,11 @@
 using namespace std;
 
 int main() {
-    string msj = "aaaa";
-    msj = Cesar().encode(msj);
+    string msj = "programacion";
+    Cesar Emisor(4);
+    Cesar Receptor(4);
+    msj = Emisor.encode(msj);
     cout<<"a) Cifrado: "<<msj<<endl;
-    msj = Cesar().decode(msj);
+    msj = Receptor.decode(msj);
     cout<<"b) Descifrado: "<<msj<<endl;
 }
