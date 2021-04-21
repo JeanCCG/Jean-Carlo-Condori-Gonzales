@@ -7,7 +7,6 @@ using namespace std;
 int main() {
     string texto="intente analizar mas profundamente los mensajes recibidos";
     //getline(cin,texto);
-
     for (int i = 4; i < texto.size(); i+=5) {
         texto.insert(i,"|");
     }
