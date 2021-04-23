@@ -3,7 +3,6 @@
 using namespace std;
 
 int main() {
-    string msj = "xzwoziuikqwv";
+    string msj = "otsndkptdknkdz";
     msj = BreakCesar().decode(msj);
-
 }
