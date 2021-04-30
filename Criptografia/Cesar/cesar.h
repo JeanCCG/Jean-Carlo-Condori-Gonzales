@@ -4,9 +4,9 @@
 using namespace std;
 class Cesar{
 private:
-    string alphabet = "abcdefghijklmnopqrstuvwxyz";
-    int key = 3;
-    int modulo(int);
+    string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz1234567890-.";
+    int key = 23;
+    int modulo(int,int);
 public:
     Cesar(int);
     string encode(string &);
