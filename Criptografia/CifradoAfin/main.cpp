@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    Afin Emisor(23,14);
+    Afin Emisor;
     cout<<Emisor.a<<" "<<Emisor.b<<endl;
     Afin Receptor(Emisor.a,Emisor.b);
     string msj="grito";
@@ -12,6 +12,6 @@ int main() {
     cout<<"Cifrado: "<<msj<<endl;
     msj= Receptor.decode(msj);
     cout<<"DesCifrado: "<<msj<<endl;
-    cout<<12-14<<endl;
+
     return 0;
 }

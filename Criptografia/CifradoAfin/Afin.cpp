@@ -6,7 +6,6 @@ using namespace std;
 Afin::Afin() {
     srand(time(NULL));
     a=rand() % 10;
-    cout<<alphabet.size()<<endl;
     int d=algoritmoEuclides(a,alphabet.size());
     while(d!=1){
         a=rand() % 10;
@@ -53,7 +52,6 @@ int Afin::modulo(int a, int n) {
 string Afin::encode(string& msj){
     string code;
     for (int i = 0; i < msj.length(); ++i) {
-        cout<<"a= "<<a<<" b="<<b<<"\nletra= "<<msj[i]<<" = "<<alphabet.find(msj[i])<<" "<<alphabet.size()<<endl;
         code+=(alphabet[modulo(a*(alphabet.find(msj[i]))+b,alphabet.size())]);
     }
     return code;
@@ -61,11 +59,8 @@ string Afin::encode(string& msj){
 string Afin::decode(string& msj) {
     string code;
     int aa=algoritmoEuclides_ext(a,alphabet.size(),1,0,0,1);
-    cout<<"inverso= "<<aa<<endl;
     for (int i = 0; i < msj.length(); ++i) {
         int g=alphabet.find(msj[i])-b;
-        cout<<alphabet.find(msj[i])<<" - "<<b<<" = "<<g<<endl;
-        cout<<"modulo = "<<modulo(aa*g,alphabet.size())<<endl;
         code+=(alphabet[modulo(aa*g,alphabet.size())]);
     }
     return code;
