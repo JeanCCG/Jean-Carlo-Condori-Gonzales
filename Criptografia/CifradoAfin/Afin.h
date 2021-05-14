@@ -4,7 +4,7 @@
 using namespace std;
 class Afin{
 private:
-    string alphabet = "abcdefghijklmnopqrstuvwxyz";
+    string alphabet = "yzpobresiancdfghjklm#qtuvwx";
     int modulo(int,int);
     int algoritmoEuclides_ext(int, int, int, int, int, int);
     int algoritmoEuclides(int ,int );
